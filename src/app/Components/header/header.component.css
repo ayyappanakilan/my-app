@@ -19,9 +19,12 @@ mat-sidenav-container, mat-sidenav-content, mat-sidenav {
   }
 
   .menu-items{
-    position: absolute;
-    right: 0;
+    /* position: absolute;
+    right: 0; */
     text-transform: uppercase;
+    position: absolute;
+    left: 130px;
+    top: 15px;
   }
   .logo
   {

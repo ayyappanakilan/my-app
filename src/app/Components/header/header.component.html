@@ -3,20 +3,26 @@
 
   <div>
     <img class="logo" src="assets/img/logo2.png">
+
+    <a href="/home"><mat-icon style="height: 20px;
+      position: absolute;
+      left: 95px;
+      top: 20px;color: white;" ria-hidden="false" aria-label="Example home icon" fontIcon="home"/></a>
   </div>
 
 
   <div class="menu-items"> 
-  <button mat-button [matMenuTriggerFor]="aboveMenu">CATEGORIES</button>
+  <!-- <button mat-button [matMenuTriggerFor]="aboveMenu">
+    <a href="/category">CATEGORIES</a></button>
 <mat-menu #aboveMenu="matMenu" yPosition="above">
   <button mat-menu-item>MATTRESS</button>
   <button mat-menu-item>PILLOWS</button>
-</mat-menu>
+</mat-menu> -->
 
+<a mat-button href="/category">CATEGORIES</a>
+<a mat-button href="/about">ABOUT US</a>
 
-<button mat-button>ABOUT US</button>
-
-<button mat-button>CONTACT US</button>
+<a mat-button href="/contact">CONTACT US</a>
 </div>
 
 
