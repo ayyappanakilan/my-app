@@ -7,3 +7,9 @@
   .icon-hover:hover i {
     color: #3b71ca !important;
   }
+  .box
+  {
+    box-shadow:     10px 10px 5px grey;
+    
+transition: 0.3s;cursor: pointer;margin-top: 6px;height: auto;text-align: center;padding: 5px; border-radius: 15px;
+  }

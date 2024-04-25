@@ -6,6 +6,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ProductDetailsComponent } from '../product-details/product-details.component';
 import { DataService} from '../../../services/data.service';
+import { MatCardModule } from '@angular/material/card';
 
 
 interface FoodNode {
@@ -45,7 +46,7 @@ interface ExampleFlatNode {
 @Component({
   selector: 'app-catagories',
   standalone: true,
-  imports: [MatTreeModule,MatIconModule,MatButtonModule,MatToolbarModule,ProductDetailsComponent],
+  imports: [MatTreeModule,MatIconModule,MatButtonModule,MatToolbarModule,ProductDetailsComponent,MatCardModule],
   templateUrl: './catagories.component.html',
   styleUrl: './catagories.component.css'
 })
@@ -87,7 +88,7 @@ export class CatagoriesComponent {
   nodeclick(node:any)
   {
     debugger;
-    this.newItemEvent.emit(this._data.categories[0]);
+    this.newItemEvent.emit(this._data.categories[1]);
 
   }
 

@@ -115,135 +115,49 @@
                 top: -6px;">Please select mattress height and width for the price calculations</span></mat-card-content>
             </mat-card>
            </div>
+
+           
           </div>
         </main>
+      </div>
+      <div class="row">
+        <mat-tab-group>
+          <mat-tab>
+            <ng-template mat-tab-label>
+              <mat-icon class="example-tab-icon">bed</mat-icon>
+              Warrenty
+            </ng-template>
+            <div>
+              <ul>
+                <li>The company will repair the product, at no cost, if the product is still under warranty</li>
+                <li>The company will repair any broken parts of a product using new or replacement parts</li>
+                <li>The product will be exchanged with a new product</li>
+                <li>The price of product will be refunded</li>
+              </ul>
+            </div>
+          </mat-tab>
+        
+          <mat-tab>
+            <ng-template mat-tab-label>
+              <mat-icon class="example-tab-icon">description</mat-icon>
+              Description
+            </ng-template>
+            <div>
+              <ul>
+                <li>A cotton overlay mattress in Tea Rose</li>
+                <li>Hand-spun, woven and dyed from 100% cotton</li>
+                <li>Made on a traditional loom in West Africa</li>
+                <li>For layering in a sunny garden spot or next to the fire and snoozing the afternoon away</li>
+              </ul>
+            </div>
+          </mat-tab>
+        </mat-tab-group>
       </div>
     </div>
   </section>
   <!-- content -->
   
-  <section class="bg-light border-top py-4" *ngIf="selectedCategory!=undefined">
-    <div class="container">
-      <div class="row gx-4">
-        <div class="col-lg-8 mb-4">
-          <div class="border rounded-2 px-3 py-2 bg-white">
-            <div class="tab-content" id="ex1-content">
-              <!-- <div class="tab-pane fade show active" id="ex1-pills-1" role="tabpanel" aria-labelledby="ex1-tab-1">
-                <p>
-                  With supporting text below as a natural lead-in to additional content. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                  pariatur.
-                </p>
-                <div class="row mb-2">
-                  <div class="col-12 col-md-6">
-                    <ul class="list-unstyled mb-0">
-                      <li><i class="fas fa-check text-success me-2"></i>Some great feature name here</li>
-                      <li><i class="fas fa-check text-success me-2"></i>Lorem ipsum dolor sit amet, consectetur</li>
-                      <li><i class="fas fa-check text-success me-2"></i>Duis aute irure dolor in reprehenderit</li>
-                      <li><i class="fas fa-check text-success me-2"></i>Optical heart sensor</li>
-                    </ul>
-                  </div>
-                  <div class="col-12 col-md-6 mb-0">
-                    <ul class="list-unstyled">
-                      <li><i class="fas fa-check text-success me-2"></i>Easy fast and ver good</li>
-                      <li><i class="fas fa-check text-success me-2"></i>Some great feature name here</li>
-                      <li><i class="fas fa-check text-success me-2"></i>Modern style and design</li>
-                    </ul>
-                  </div>
-                </div>
-                <table class="table border mt-3 mb-2">
-                  <tr>
-                    <th class="py-2">Display:</th>
-                    <td class="py-2">13.3-inch LED-backlit display with IPS</td>
-                  </tr>
-                  <tr>
-                    <th class="py-2">Processor capacity:</th>
-                    <td class="py-2">2.3GHz dual-core Intel Core i5</td>
-                  </tr>
-                  <tr>
-                    <th class="py-2">Camera quality:</th>
-                    <td class="py-2">720p FaceTime HD camera</td>
-                  </tr>
-                  <tr>
-                    <th class="py-2">Memory</th>
-                    <td class="py-2">8 GB RAM or 16 GB RAM</td>
-                  </tr>
-                  <tr>
-                    <th class="py-2">Graphics</th>
-                    <td class="py-2">Intel Iris Plus Graphics 640</td>
-                  </tr>
-                </table>
-              </div>
-              <div class="tab-pane fade mb-2" id="ex1-pills-2" role="tabpanel" aria-labelledby="ex1-tab-2">
-                Tab content or sample information now <br />
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              </div>
-              <div class="tab-pane fade mb-2" id="ex1-pills-3" role="tabpanel" aria-labelledby="ex1-tab-3">
-                Another tab content or sample information now <br />
-                Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum.
-              </div>
-              <div class="tab-pane fade mb-2" id="ex1-pills-4" role="tabpanel" aria-labelledby="ex1-tab-4">
-                Some other tab content or sample information now <br />
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                officia deserunt mollit anim id est laborum.
-              </div> -->
-
-
-              <mat-tab-group>
-                <mat-tab>
-                  <ng-template mat-tab-label>
-                    <mat-icon class="example-tab-icon">bed</mat-icon>
-                    Warrenty
-                  </ng-template>
-                  Content 2
-                </mat-tab>
-              
-                <mat-tab>
-                  <ng-template mat-tab-label>
-                    <mat-icon class="example-tab-icon">description</mat-icon>
-                    
-                  </ng-template>
-                  <p>
-                    - A cotton overlay mattress in Tea Rose<br>
-                    - Hand-spun, woven and dyed from 100% cotton<br>
-                    - Made on a traditional loom in West Africa<br>
-                    - For layering in a sunny garden spot or next to the fire and snoozing the afternoon away
-                  </p>
-                </mat-tab>
-              </mat-tab-group>
-              
-
-            </div>
-            <!-- Pills content -->
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="px-0 border rounded-2 shadow-0">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Similar items</h5>
-                <div class="d-flex">
-                  <!-- <a href="#" class="me-3">
-                    <img src="https://mdbcdn.b-cdn.net/img/bootstrap-ecommerce/items/11.webp" style="min-width: 96px; height: 96px;" class="img-md img-thumbnail" />
-                  </a>
-                  <div class="info">
-                    <a href="#" class="nav-link mb-1"> Blazer Suit Dress Jacket for Men, Blue color </a>
-                    <strong class="text-dark"> $339.90</strong>
-                  </div> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+ 
 
   
   
