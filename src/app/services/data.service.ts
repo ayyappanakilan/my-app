@@ -37,5 +37,36 @@ export class DataService {
     id: 4
   }];
 
+  imageObject: Array<object> = [{
+    image: 'assets/img/kapok-mattress1.webp',
+    thumbImage: 'assets/img/kapok-mattress1.webp',
+    alt: 'alt of image',
+    title: 'Kapok Mattress',
+    order: 2
+}, 
+{
+  image: 'assets/img/cotton-mattress.jpeg',
+  thumbImage: 'assets/img/cotton-mattress.jpeg',
+  alt: 'alt of image',
+  title: 'Cotton Mattress',
+  order: 1 //Optional: if you pass this key then slider images will be arrange according @input: slideOrderType
+},
+{
+  image: 'assets/img/banner3.png',
+  thumbImage: 'assets/img/banner3.png',
+  alt: 'alt of image',
+  title: 'title of image',
+  order: 3//Optional: if you pass this key then slider images will be arrange according @input: slideOrderType
+}
+, 
+{
+  image: 'assets/img/banner4.png',
+  thumbImage: 'assets/img/banner4.png',
+  alt: 'alt of image',
+  title: 'title of image',
+  order: 4 //Optional: if you pass this key then slider images will be arrange according @input: slideOrderType
+}
+];
+selectedCategory:any;
   constructor() { }
 }

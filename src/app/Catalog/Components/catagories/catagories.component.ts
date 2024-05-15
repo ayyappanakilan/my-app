@@ -7,6 +7,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { ProductDetailsComponent } from '../product-details/product-details.component';
 import { DataService} from '../../../services/data.service';
 import { MatCardModule } from '@angular/material/card';
+import { Router } from '@angular/router';
 
 
 interface FoodNode {
@@ -77,9 +78,7 @@ export class CatagoriesComponent {
 
   dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
 
-  
-
-  constructor(private _data:DataService) {
+  constructor(private _data:DataService,private _router:Router) {
     this.dataSource.data = TREE_DATA;
   }
 
@@ -87,9 +86,7 @@ export class CatagoriesComponent {
     
   nodeclick(node:any)
   {
-    debugger;
-    this.newItemEvent.emit(this._data.categories[1]);
-
+    this._data.selectedCategory = this._data.categories.filter(a=>a.title.startsWith(node.name.toUpperCase()))[0];
   }
 
   }

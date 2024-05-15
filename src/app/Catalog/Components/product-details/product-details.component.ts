@@ -28,7 +28,6 @@ import {MatTabsModule} from '@angular/material/tabs';
 
 export class ProductDetailsComponent {
 
-selectedCategory:any;
 heights: any[] = [
   {value: 6, viewValue: '6'},
   {value: 6.5, viewValue: '6.5'},
@@ -46,27 +45,25 @@ widths: any[] = [
 price:string="₹ 0";
 selectedwidth:any;
 selectedheight:any;
-constructor(private _data:DataService,private _router:Router)
+constructor(public _data:DataService,private _router:Router)
 {
 
+ debugger;
  
-  // if(this._data.category == undefined)
-  //   {
-  //     this._router.navigate(['/home']);
-  //   }
-  this.selectedCategory = this._data.categories[0];
+  this._data.selectedCategory = this._data.categories[0];
 
 }
 ngAfterViewInt()
 {
-  this.selectedCategory = this._data.categories[0];
+  debugger;
+  this._data.selectedCategory = this._data.category;
 }
 changewidth()
 {
   debugger;
   if(this.selectedheight!=undefined && this.selectedwidth!=undefined)
   {
-  switch(this.selectedCategory.title)
+  switch(this._data.selectedCategory.title)
   {
     case "COTTON MATTRESS":
       this.price = "₹ "+(this.selectedwidth + this.selectedheight)*80+" only";
@@ -87,6 +84,6 @@ else
 }
 
 nodeclick(node: any) {
-  this.selectedCategory = node;
+  this._data.selectedCategory = node;
 }
 }

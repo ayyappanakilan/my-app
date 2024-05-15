@@ -1,11 +1,13 @@
-FROM node:alpine
+FROM node:latest
 
-WORKDIR /Users/ayyappan/my-app/src/app
 
-COPY . /Users/ayyappan/my-app/src/app
 
-RUN npm install -g @angular/cli
+COPY  /src /tmp
 
-RUN npm install
+EXPOSE 15000
 
-CMD ["ng", "serve", "--host", "0.0.0.0"]
+WORKDIR /tmp
+
+RUN npm install -g @angular/cli 
+
+ENTRYPOINT ["ng serve"]
