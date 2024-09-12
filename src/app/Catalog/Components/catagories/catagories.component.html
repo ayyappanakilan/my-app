@@ -1,15 +1,10 @@
  <!-- Page Loader -->
  <div id="loader-wrapper">
   <div id="loader"></div>
-
   <div class="loader-section section-left"></div>
   <div class="loader-section section-right"></div>
-
 </div>
 <div class="row">
-
-  <mat-toolbar style="height:40px" color="primary"><mat-icon aria-hidden="false" aria-label="Example inventory icon" fontIcon="inventory"></mat-icon>CATEGORIES</mat-toolbar>
-
 <div class="col-md-2" style="padding-top: 10px;position: relative;
 left: 10px;">
   <mat-tree class="box" [dataSource]="dataSource" [treeControl]="treeControl">
@@ -22,9 +17,9 @@ left: 10px;">
     </mat-tree-node>
     <!-- This is the tree node template for expandable nodes -->
     <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
-      <button  mat-button matTreeNodeToggle
+      <button (click)="expand(node)" mat-button matTreeNodeToggle
               [attr.aria-label]="'Toggle ' + node.name">
-        <mat-icon class="mat-icon-rtl-mirror">
+        <mat-icon (click)="expand(node)" class="mat-icon-rtl-mirror">
           {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
         </mat-icon>
       </button>

@@ -48,9 +48,7 @@ selectedheight:any;
 constructor(public _data:DataService,private _router:Router)
 {
 
- debugger;
  
-  this._data.selectedCategory = this._data.categories[0];
 
 }
 ngAfterViewInt()

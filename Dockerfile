@@ -1,13 +1,13 @@
 FROM node:latest
 
+RUN  npm install -g @angular/cli 
 
-
-COPY  /src /tmp
-
-EXPOSE 15000
+COPY  . /tmp/
 
 WORKDIR /tmp
 
-RUN npm install -g @angular/cli 
+RUN npm install --force
 
-ENTRYPOINT ["ng serve"]
+RUN ls -lrt
+
+ENTRYPOINT ["sh", "-c", "ng serve --host 0.0.0.0 --port 4200"]

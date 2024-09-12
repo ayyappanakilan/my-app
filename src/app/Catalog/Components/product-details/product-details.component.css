@@ -13,3 +13,9 @@
     
 transition: 0.3s;cursor: pointer;margin-top: 6px;height: auto;text-align: center;padding: 5px; border-radius: 15px;
   }
+  .empty_panel{
+    font-size: larger;
+    font-style: italic;
+    color: #192433;
+    font-weight: 700;
+  }

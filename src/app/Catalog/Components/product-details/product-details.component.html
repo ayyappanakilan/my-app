@@ -1,10 +1,10 @@
 <mat-toolbar style="
   height: 30px;
   font-size: 15px;
-" color="primary"><mat-icon aria-hidden="false" aria-label="Example inventory icon" fontIcon="inventory"></mat-icon>Product Details</mat-toolbar>
+" color="grey"><mat-icon aria-hidden="false" aria-label="Example inventory icon" fontIcon="inventory"></mat-icon>Product Details</mat-toolbar>
 <br>
   <!-- content -->
-  <section class="py-5" *ngIf="this._data.selectedCategory!=undefined">
+  <section class="py-5" *ngIf="this._data.selectedCategory!=undefined; else elseBlock">
     <div class="container">
       <div class="row gx-5">
         <aside class="col-lg-6">
@@ -35,9 +35,9 @@
         </aside>
         <main class="col-lg-6">
           <div class="ps-lg-3">
-            <h4 class="title text-dark">
-              <b>{{this._data.selectedCategory.title}}</b>
-            </h4>
+            <h1 class="title text-dark">
+              <b style="font-family: cursive;color: #2b3e56;">{{this._data.selectedCategory.title}}</b>
+            </h1>
             <div class="d-flex flex-row my-3">
               <div class="text-warning mb-1 me-2">
                 <mat-icon aria-hidden="false" aria-label="Example star_rate icon" fontIcon="star_rate"></mat-icon>
@@ -141,18 +141,22 @@
               Description
             </ng-template>
             <div>
-              <ul>
-                <li>A cotton overlay mattress in Tea Rose</li>
-                <li>Hand-spun, woven and dyed from 100% cotton</li>
-                <li>Made on a traditional loom in West Africa</li>
-                <li>For layering in a sunny garden spot or next to the fire and snoozing the afternoon away</li>
-              </ul>
+                <p>A cotton overlay mattress in Tea Rose</p>
+                <p>Hand-spun, woven and dyed from 100% cotton</p>
+                <p>Made on a traditional loom in West Africa</p>
+                <p>For layering in a sunny garden spot or next to the fire and snoozing the afternoon away</p>
             </div>
           </mat-tab>
         </mat-tab-group>
       </div>
     </div>
+    
   </section>
+  <ng-template #elseBlock>
+    <div class="empty_panel">
+      <p>Please select the category from the left panel.</p>
+    </div>
+  </ng-template>
   <!-- content -->
   
  

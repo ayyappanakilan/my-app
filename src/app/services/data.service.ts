@@ -30,11 +30,32 @@ export class DataService {
     id: 3
   },
   {
-    image: 'assets/img/cotton-mattress1.jpeg',
-    thumbImage: 'assets/img/cotton-mattress1.jpeg',
+    image: 'assets/img/pillow1.jpeg',
+    thumbImage: 'assets/img/pillow1.jpeg',
     alt: 'alt of image',
-    title: 'COTTON MATTRESS',
+    title: 'COTTON PILLOWS',
     id: 4
+  },
+  {
+    image: 'assets/img/pillow2.jpeg',
+    thumbImage: 'assets/img/pillow2.jpeg',
+    alt: 'alt of image',
+    title: 'KAPOK PILLOWS',
+    id: 5
+  },
+  {
+    image: 'assets/img/pillow3.webp',
+    thumbImage: 'assets/img/pillow3.webp',
+    alt: 'alt of image',
+    title: 'FOAM PILLOWS',
+    id: 6
+  },
+  {
+    image: 'assets/img/pillow4.jpeg',
+    thumbImage: 'assets/img/pillow4.jpeg',
+    alt: 'alt of image',
+    title: 'RECRON PILLOWS',
+    id: 7
   }];
 
   imageObject: Array<object> = [{

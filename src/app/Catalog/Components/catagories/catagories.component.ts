@@ -24,7 +24,8 @@ const TREE_DATA: FoodNode[] = [
     name: 'Pillows',
     children: [
       
-        {name: 'Cotton'}, {name: 'Kapok'},
+        {name: 'Cotton'}, 
+        {name: 'Kapok'},
       
       {
         name: 'Foam'
@@ -44,6 +45,7 @@ interface ExampleFlatNode {
 }
 
 
+
 @Component({
   selector: 'app-catagories',
   standalone: true,
@@ -52,7 +54,11 @@ interface ExampleFlatNode {
   styleUrl: './catagories.component.css'
 })
 
+
 export class CatagoriesComponent {
+
+categoryName:string="";
+
 
   @Output() newItemEvent = new EventEmitter<any>();
 
@@ -86,7 +92,13 @@ export class CatagoriesComponent {
     
   nodeclick(node:any)
   {
-    this._data.selectedCategory = this._data.categories.filter(a=>a.title.startsWith(node.name.toUpperCase()))[0];
+    debugger;
+    this._data.selectedCategory = this._data.categories.filter(a=>a.title.startsWith(node.name.toUpperCase()+' '+this.categoryName.toUpperCase()))[0];
+  }
+  expand(node:any)
+  {
+    debugger;
+    this.categoryName = node.name;
   }
 
   }
